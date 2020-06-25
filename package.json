@@ -1,0 +1,23 @@
+{
+  "name": "Humpty-dumpty",
+  "version": "1.0.0",
+  "description": "Humpty-dumpty",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cyberwolf199807/Humpty-dumpty.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cyberwolf199807/Humpty-dumpty/issues"
+  },
+  "homepage": "https://github.com/cyberwolf199807/Humpty-dumpty#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
