@@ -1,8 +1,16 @@
 const express=require('express');
 const routes1=require('./routes/routeposts.js');
+var driver=require('./mongomiddleware');
 const { pathToFileURL } = require('url');
+var bodyparser=require('body-parser');
 const app=express();
+app.use(bodyparser.json());
+var postencoder=bodyparser.urlencoded({extended: false});
 const route=express.Router();
+route.post('/signup',postencoder,(req,res)=>{
+    driver.insert(req.body);
+    res.redirect("/humpty-dumpty1");
+    });
 route.get('/',routes1.e1);
 route.get('/secondroute',routes1.e2);
 route.get('/humpty-dumpty',routes1.e3);
