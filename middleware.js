@@ -11,6 +11,9 @@ route.post('/signup',postencoder,(req,res)=>{
     driver.insert(req.body);
     res.redirect("/humpty-dumpty1");
     });
+
+
+route.get('/dei_certs',routes1.e0);
 route.get('/',routes1.e1);
 route.get('/secondroute',routes1.e2);
 route.get('/humpty-dumpty',routes1.e3);
