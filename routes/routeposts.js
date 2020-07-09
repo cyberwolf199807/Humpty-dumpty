@@ -1,3 +1,5 @@
+var validurl=require('../validurl');
+var checknuditycontent=require('../checknuditycontent');
 const e1=(req,res)=>res.end("Portugal Wins the match works the same as node");
 const e2=(req,res)=>res.end("Second Route worked");
 const e3=(req,res)=>res.end("Third Route worked");
@@ -35,7 +37,21 @@ const e34=(req,res)=>res.sendFile(__dirname+'/webfonts/fa-brands-400.woff');
 const e35=(req,res)=>res.sendFile(__dirname+'/img/constructive_bg_01.jpg');
 const e36=(req,res)=>res.sendFile(__dirname+'/slick/slick-theme.css');
 const e37=(req,res)=>res.sendFile(__dirname+'/css/bootstrap.min.css.map');
+const e38=(req,res)=>res.sendFile(__dirname+'1.mp4');
+const e39=(req,res)=>res.sendFile(__dirname+'3.mp4');
+const e40=(req,res)=>{
+    console.log(req.body)
+    // const ad=[];
+    // ad.add(req.body.name);
+const ob={};
+ob.searchurl=req.body.name;
+ob.isurlvalid=validurl(req.body.name)==1?"Yes":"No";
+var x=(checknuditycontent(req.body.name));
+ob.sexuallyexplicit=(x || true);
+console.log(ob);
+res.json(ob);}
 
 
 
-module.exports={e1,e2,e3,e4,e5,e6,e7,e8,e9,e10,e11,e12,e13,e14,e15,e16,e17,e18,e19,e20,e21,e22,e23,e24,e25,e26,e27,e28,e29,e30,e31,e32,e33,e34,e35,e36,e37};
+
+module.exports={e1,e2,e3,e4,e5,e6,e7,e8,e9,e10,e11,e12,e13,e14,e15,e16,e17,e18,e19,e20,e21,e22,e23,e24,e25,e26,e27,e28,e29,e30,e31,e32,e33,e34,e35,e36,e37,e38,e39,e40};

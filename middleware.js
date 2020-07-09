@@ -1,20 +1,18 @@
 const express=require('express');
 const routes1=require('./routes/routeposts.js');
-var driver=require('./mongomiddleware');
+
 const { pathToFileURL } = require('url');
 var bodyparser=require('body-parser');
 const app=express();
 app.use(bodyparser.json());
 var postencoder=bodyparser.urlencoded({extended: false});
 const route=express.Router();
-route.post('/signup',postencoder,(req,res)=>{
-    driver.insert(req.body);
-    res.redirect("/humpty-dumpty1");
-    });
-
-
-route.get('/dei_certs',routes1.e0);
+// route.post('/signup',postencoder,(req,res)=>{
+//     driver.insert(req.body);
+//     res.redirect("/humpty-dumpty1");
+//     });
 route.get('/',routes1.e1);
+
 route.get('/secondroute',routes1.e2);
 route.get('/humpty-dumpty',routes1.e3);
 route.get('/humpty-dumpty1',routes1.e4);
@@ -51,6 +49,9 @@ route.get('/webfonts/fa-brands-400.woff',routes1.e34);
 route.get('/img/constructive_bg_01.jpg',routes1.e35);
 route.get('/slick/slick-theme.css',routes1.e36);
 route.get('/css/bootstrap.min.css.map',routes1.e37);
+route.get('/vid1.mp4',routes1.e38);
+route.get('/vid2.mp4',routes1.e39);
+route.post('/search',postencoder,routes1.e40);
 
 
 

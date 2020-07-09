@@ -70,30 +70,7 @@
 									<span>Other Resources</span>
 								</a>
 							</li>
-							<li>
-								<a href="#company" class="scrolly" data-bg-img="constructive_bg_03.jpg" data-page="#tm-section-3">
-									<i class="fas fa-users tm-nav-fa-icon"></i>
-									<span>Other Resources</span>
-								</a>
-							</li>
-							<div class="contact_message">
-								<form action="/signup" method="POST" class="contact-form">
-									<div class="form-group">
-										<br>
-										<br>
-										<h1 style="text-align: center;">Visitor's Feedback</h1>
-										<input  type="text" id="contact_name" name="contact_name" class="form-control" placeholder="Feedback.." required>
-										<input  type="text" id="email" name="email" class="form-control" placeholder="Email..." required>
-										
-									<br>
-										
-									
-									<button type="submit" class="btn tm-btn-submit tm-btn ml-auto">Submit</button>
-								</form>
-							</div>
-						</div>
 						</ul>
-						
 					</nav>
 				</div>
 			</div>
@@ -114,8 +91,9 @@
 							
 							<div class="mt-xl-5">
 							<div class="col-sm-12">
-								<form class="form-inline d-flex justify-content-center md-form form-sm active-cyan active-cyan-2 mt-2">
-								<i class="fas fa-search" aria-hidden="true"></i><input class="form-control form-control-sm ml-3 w-75" type="text" placeholder="Enter URL Here.."aria-label="Search">
+								<form action="/search" method="POST" class="form-inline d-flex justify-content-center md-form form-sm active-cyan active-cyan-2 mt-2">
+								<input class="form-control form-control-sm ml-3 w-75" type="text" name="name" placeholder="Enter URL Here.."aria-label="Search">
+								<button type="submit">Submit</button>
 								</form>
 							</div>
 							<div class="row-sm">
